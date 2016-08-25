@@ -236,6 +236,18 @@ This board uses the following pin mapping:
         .dio = {4, 5, 7},
     };
 
+#### Esp8266
+This board uses the following pin mapping:
+
+    const lmic_pinmap lmic_pins = {
+        .nss = D8,   // use 10k resistor to ground or use other pin.
+        .rxtx = LMIC_UNUSED_PIN,
+        .rst = LMIC_UNUSED_PIN, 
+        .dio = {LMIC_UNUSED_PIN, LMIC_UNUSED_PIN, LMIC_UNUSED_PIN},
+    };
+
+See the [issue] (https://github.com/matthijskooijman/arduino-lmic/issues/7).
+
 Examples
 --------
 This library currently provides three examples:
